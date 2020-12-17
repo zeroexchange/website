@@ -1,0 +1,144 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.columns.fullhd-columns {
+  display: flex;
+  @include until($fullhd) {
+    display: block;
+  }
+}
+
+.hero {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    img {
+      width: 400px;
+      max-width: 100%;
+    }
+    h1 {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      color: $white;
+      font-size: 2.25rem;
+    }
+  }
+
+  .socials-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    li {
+      color: $white;
+      font-size: 3rem;
+      transition: color .2s ease-in-out;
+      cursor: pointer;
+      * {
+        transition: color .2s ease-in-out;
+        color: $white;
+      }
+      &:hover {
+        color: $blue;
+        * {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .button-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .button {
+      margin-right: 3rem;
+    }
+    .text-link {
+      font-size: 1.1rem;
+    }
+  }
+
+  @include until($fullhd) {
+    height: auto;
+    .hero-content {
+      text-align: center;
+      padding: 1rem;
+      img {
+        width: 240px;
+        margin: auto;
+      }
+      h1 {
+        font-size: 1.25rem;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .socials-list {
+      flex-direction: row;
+      align-items: center;
+      margin: auto;
+      margin-top: 1.5rem;
+      li {
+        margin-left: .75rem;
+        margin-right: .75rem;
+        font-size: 1.75rem;
+      }
+    }
+    .button-list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .button {
+        margin-right: 0;
+      }
+      .text-link {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+}
+
+.bottom-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    img {
+      width: 60px;
+      opacity: 1;
+      transition: all .2s ease-in-out;
+      &.white-bg {
+        border: 3px solid $white;
+        border-radius: 100%;
+        background: $white;
+      }
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+  @include until($fullhd) {
+    li {
+      img {
+        width: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.slide {
+  height: calc(100vh - 80px);
+  max-height: 100%;
+  padding: 1rem;
+  .slide-inner {
+    height: 100%;
+    border-radius: 16px;
+    background: $white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .slide-left {
+      width: 420px;
+      max-width: 100%;
+      background: $white;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+      * {
+        color: $darkblue;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+      p {
+        margin-bottom: 1rem;
+        display: block;
+        font-size: .925rem;
+      }
+      small {
+        font-size: .8;
+        opacity: .75;
+      }
+    }
+    .slide-right {
+      flex-grow: 1;
+      width: 100%;
+      min-height: 100%;
+      background: rgba($blue, .1);
+    }
+  }
+}

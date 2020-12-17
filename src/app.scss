@@ -1,0 +1,10 @@
+// Global variables
+@import './styles/variables';
+
+// Import Bulma
+@import '../node_modules/bulma/bulma.sass';
+
+// global styles
+@import './styles/global';
+@import './styles/animations';
+@import './styles/buttons';

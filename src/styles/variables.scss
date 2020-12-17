@@ -1,0 +1,33 @@
+// Set colors
+$blue: #2662FF;
+$darkblue: #0E1130;
+
+// Bulma's global variables
+$family-sans-serif: 'Roboto', sans-serif;
+$white-opaq: rgba(255,255,255,.15);
+$primary: $blue;
+$link: $blue;
+$white: #fff;
+$half-white: rgba(255,255,255,.5);
+
+// Update Bulma's variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$border-radius: 12px;
+
+.primary-color {
+  color: $blue;
+}
+
+.primary-bg {
+  background: $blue;
+}
+
+.darkblue-color {
+  color: $darkblue;
+}
+
+.darkblue-bg {
+  background: $darkblue;
+}

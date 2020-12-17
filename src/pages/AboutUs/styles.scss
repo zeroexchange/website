@@ -1,0 +1,18 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.slide {
+  height: calc(100vh - 80px);
+  max-height: 100%;
+  padding: 1rem;
+  .slide-inner {
+    height: 100%;
+    border-radius: 16px;
+    background: $white;
+  }
+}
