@@ -2,12 +2,7 @@ import React from 'react'
 
 const SlideSeven = () => (
   <div className="slide">
-    <div className="slide-inner">
-      <div className="slide-left">
-      </div>
-      <div className="slide-right">
-      </div>
-    </div>
+    <img src="/ski-lift.png" alt="Zeronomics" className="ski-lift" />
   </div>
 )
 

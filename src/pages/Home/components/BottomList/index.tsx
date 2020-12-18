@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BottomList = ({ goToSite }) => (
-  <ul className="bottom-list">
+  <ul className="bottom-list disabled">
     <li className="animated fadeInUpMicro d300 delay100">
       <img src="/coingecko.png" alt="CoinGecko" className="white-bg" />
     </li>

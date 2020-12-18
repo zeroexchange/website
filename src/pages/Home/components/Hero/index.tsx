@@ -13,7 +13,7 @@ const Hero = ({ goToSite }) => (
           <FontAwesomeIcon icon="rocket" size="sm" />
           </li>
           <li className="text-link blue"
-            onClick={() => goToSite('https://docs.zero.exchange')}>
+            onClick={() => goToSite('https://blog.zero.exchange')}>
             Read Our Blog
           </li>
         </ul>
@@ -22,7 +22,7 @@ const Hero = ({ goToSite }) => (
         <li className="animated fadeInRightMicro d300 delay250" onClick={() => goToSite('https://www.facebook.com/ZeroExchange-105556548092263')}>
           <FontAwesomeIcon icon={['fab', 'facebook']} />
         </li>
-        <li className="animated fadeInRightMicro d300 delay200">
+        <li className="animated fadeInRightMicro d300 delay200" onClick={() => goToSite('https://twitter.com/officialzerodex')}>
           <FontAwesomeIcon icon={['fab', 'twitter']} />
         </li>
         <li className="animated fadeInRightMicro d300 delay150" onClick={() => goToSite('https://discord.gg/5xwKdqrtDu')}>

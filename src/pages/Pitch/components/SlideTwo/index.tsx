@@ -11,6 +11,7 @@ by supplying liquidity (or other community initiatives).
         </p>
       </div>
       <div className="slide-right">
+        <img src="/zeronomics.png" alt="Zeronomics" />
       </div>
     </div>
   </div>

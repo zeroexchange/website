@@ -14,6 +14,15 @@ of Santa and his helpers. Open Source Repo located on Github.
         </p>
       </div>
       <div className="slide-right">
+
+      <h3>Zero Fees</h3>
+      <p>Utilizing the Avalanche (AVA) Blockchain, Zero Exchange offers its users a fee free trading experience. Gone are the days of gas wars and absurd transaction fees!</p>
+      <h3>Zero Finality</h3>
+      <p>Successful trading relies on quick reaction time, now you have an exchange that gives you the speed necessary to trade in harmony with the market. Zero features sub second block times with
+      near instantaneous transaction confirmation (120% faster than Ethereum).</p>
+      <h3>Zero Hassle</h3>
+      <p>Simply connect your Web3 enabled wallet to begin trading, staking, and farming your favorite pairs!</p>
+
       </div>
     </div>
   </div>

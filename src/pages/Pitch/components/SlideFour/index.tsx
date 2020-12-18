@@ -10,6 +10,7 @@ const SlideFour = () => (
         </p>
       </div>
       <div className="slide-right">
+        <img src="/zero-advantage.png" alt="Zeronomics" />
       </div>
     </div>
   </div>
