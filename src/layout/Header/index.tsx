@@ -60,8 +60,8 @@ export default function Header(props) {
             <li className="is-hidden-touch">
               <a href='mailto:hello@zero.exchange'>
                 Contact Us
+                <FontAwesomeIcon icon="envelope" size="sm" />
               </a>
-              <FontAwesomeIcon icon="envelope" size="sm" />
             </li>
             <li onClick={() => handleClick('/pitch')} className={pathname === '/pitch' ? 'active' : ''}>
               Token Offering
