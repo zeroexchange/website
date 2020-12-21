@@ -52,11 +52,6 @@ export default function Header(props) {
           </div>
 
           <ul className="link-list">
-            <li onClick={() => handleClick('/about-us')}
-              className={`is-hidden-touch ${pathname === '/about-us' ? 'active' : ''}`}>
-              About Us
-              <FontAwesomeIcon icon="question" size="sm" />
-            </li>
             <li className="is-hidden-touch">
               <a href='mailto:hello@zero.exchange'>
                 Contact Us
