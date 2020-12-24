@@ -45,7 +45,7 @@ export default function AirDrop() {
         email: emailInput
       }).then(() => {
         setEmailInput('');
-        ToastsStore.success('Your email has been sent.');
+        ToastsStore.success(`Your email has been submitted. We'll be in touch to collect your address.`);
       }).catch(() => {
         setEmailInput('');
         ToastsStore.success('Something went wrong, please try again.');
@@ -84,8 +84,8 @@ export default function AirDrop() {
 
               { emailSent &&
                 <p className="confirmation">
-                  <span> Your email has been sent, thanks!</span>
                   <FontAwesomeIcon icon="check" size="sm" />
+                  <span> Your email has been sent, we will reach out to collect your address when the airdrop is ready!</span>
                 </p>
               }
 
