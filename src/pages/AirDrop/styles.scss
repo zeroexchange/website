@@ -1,0 +1,106 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.airdrop-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  justify-content: center;
+  align-items: center;
+  .columns {
+    margin: 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  h1 {
+    display: block;
+    color: #fff;
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+    span {
+      display: block;
+      margin-top: -20px;
+      color: $blue;
+    }
+  }
+  h5 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .content-box {
+    background: transparent;
+    position: relative;
+    h6 {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .input {
+      outline: none;
+      border: 1px solid $blue;
+      height: 60px;
+      padding-left: 1rem;
+      border-radius: 100px;
+      background: rgba(255,255,255,.1);
+      color: #fff;
+      font-size: 1.25rem;
+      padding-right: 120px;
+      &::placeholder {
+        color: rgba(255,255,255,.5);
+        font-size: 1.25em;
+      }
+    }
+    .input + .button {
+      position: absolute;
+      right: 6px;
+      margin-top: 5px;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        color: #fff;
+        margin-right: 2rem;
+        font-size: 2rem;
+        transition: all .2s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          color: $blue;
+        }
+      }
+    }
+  }
+  @include until($desktop) {
+    h1 {
+      font-size: 40px;
+    }
+    h5 {
+      font-size: 1.1rem;
+    }
+    .content-box {
+      h6 {
+        font-size: 1.1rem;
+      }
+      .input {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.confirmation {
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  span {
+    color: $blue;
+    margin-right: 1rem;
+  }
+  i, svg {
+    color: $blue;
+  }
+}

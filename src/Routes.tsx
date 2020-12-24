@@ -1,17 +1,19 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import React, { useState } from 'react';
 
 import AboutUsPage from './pages/AboutUs';
-import Header from './layout/Header'
-import HomePage from './pages/Home'
-import PitchPage from './pages/Pitch'
-import React from 'react'
-import ScrollToTop from './shared/components/ScrollToTop'
+import AirDropPage from './pages/AirDrop';
+import Header from './layout/Header';
+import HomePage from './pages/Home';
+import LearnMorePage from './pages/LearnMore';
+import ScrollToTop from './shared/components/ScrollToTop';
 
 export enum PublicRoutes {
   Home = '/',
-  Pitch = '/pitch',
+  LearnMore = '/learn-more',
   Contact = '/contact',
   AboutUs = '/about-us',
+  AirDrop = '/air-drop',
 }
 
 export default function Routes() {
@@ -23,11 +25,14 @@ export default function Routes() {
         <Route exact path={PublicRoutes.Home}>
           <HomePage />
         </Route>
-        <Route path={PublicRoutes.Pitch}>
-          <PitchPage />
+        <Route path={PublicRoutes.LearnMore}>
+          <LearnMorePage />
         </Route>
         <Route path={PublicRoutes.AboutUs}>
           <AboutUsPage />
+        </Route>
+        <Route path={PublicRoutes.AirDrop}>
+          <AirDropPage />
         </Route>
       </Switch>
     </BrowserRouter>

@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <Layout hasSnow={true}>
-      <div className="container pb-6">
+      <div className="container">
         <Hero goToSite={goToSite} />
         <BottomList goToSite={goToSite} />
       </div>

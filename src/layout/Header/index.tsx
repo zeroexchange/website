@@ -52,19 +52,24 @@ export default function Header(props) {
           </div>
 
           <ul className="link-list">
+            <li onClick={() => handleClick('/air-drop')} className={pathname === '/air-drop' ? 'active' : ''}>
+              Air Drop
+              <FontAwesomeIcon icon="gift" size="sm" />
+            </li>
             <li className="is-hidden-touch">
               <a href='mailto:hello@zero.exchange'>
                 Contact Us
                 <FontAwesomeIcon icon="envelope" size="sm" />
               </a>
             </li>
-            <li onClick={() => handleClick('/pitch')} className={pathname === '/pitch' ? 'active' : ''}>
-              Token Offering
-            <FontAwesomeIcon icon="coins" size="sm" />
+            <li onClick={() => handleClick('/learn-more')}
+              className={`is-hidden-touch ${pathname === '/learn-more' ? 'active' : ''}`}>
+              Learn More
+              <FontAwesomeIcon icon="question" size="sm" />
             </li>
             <li onClick={() => goToSite("https://app.zero.exchange")} className="is-hidden-touch">
               Launch App
-            <FontAwesomeIcon icon="rocket" size="sm" />
+              <FontAwesomeIcon icon="rocket" size="sm" />
             </li>
             <li className="menu-toggle is-hidden-desktop" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               { mobileMenuOpen ? <FontAwesomeIcon icon="times" size="sm" /> :
@@ -77,10 +82,10 @@ export default function Header(props) {
 
         { mobileMenuOpen &&
           <ul className="mobile-menu animated fadeInUpTiny d250 is-hidden-desktop">
-            <li onClick={() => handleClick('/about-us')}
-              className={`${pathname === '/about-us' ? 'active' : ''}`}>
+            <li onClick={() => handleClick('/learn-more')}
+              className={`${pathname === '/learn-more' ? 'active' : ''}`}>
               <FontAwesomeIcon icon="question" size="sm" />
-              About Us
+              Learn More
             </li>
             <li>
               <FontAwesomeIcon icon="envelope" size="sm" />

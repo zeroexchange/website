@@ -5,6 +5,7 @@ import {
   faCheck,
   faCoins,
   faEnvelope,
+  faGift,
   faPaperPlane,
   faQuestion,
   faRocket,
@@ -30,7 +31,8 @@ library.add(
   faEnvelope,
   faQuestion,
   faBars,
-  faTimes
+  faTimes,
+  faGift,
 )
 
 export default function App() {
