@@ -92,14 +92,8 @@ export default function AirDrop() {
               <div className="content-box mt-6">
                 <h6>Following / joining us on these platforms:</h6>
                 <ul>
-                  <li className="" onClick={() => goToSite('https://www.facebook.com/ZeroExchange-105556548092263')}>
-                    <FontAwesomeIcon icon={['fab', 'facebook']} />
-                  </li>
                   <li className="" onClick={() => goToSite('https://twitter.com/officialzerodex')}>
                     <FontAwesomeIcon icon={['fab', 'twitter']} />
-                  </li>
-                  <li className="" onClick={() => goToSite('https://discord.gg/5xwKdqrtDu')}>
-                    <FontAwesomeIcon icon={['fab', 'discord']} />
                   </li>
                   <li className="" onClick={() => goToSite('https://t.me/ZeroExchangeCommunity')}>
                     <FontAwesomeIcon icon={['fab', 'telegram']} />
