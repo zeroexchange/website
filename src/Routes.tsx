@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import React, { useState } from 'react';
 
 import AboutUsPage from './pages/AboutUs';
 import AirDropPage from './pages/AirDrop';
 import Header from './layout/Header';
 import HomePage from './pages/Home';
 import LearnMorePage from './pages/LearnMore';
+import React from 'react';
 import ScrollToTop from './shared/components/ScrollToTop';
 
 export enum PublicRoutes {
