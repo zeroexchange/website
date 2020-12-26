@@ -13,6 +13,7 @@ export default function EnterAddress() {
 
   const [ authUser , setAuthUser ] = useState<any | null>(null);
   const [ emailInput , setEmailInput ] = useState<any | null>('');
+  const [ emailCheck , setEmailCheck ] = useState<any | null>('');
   const [ ethInput , setEthInput ] = useState<any | null>('');
   const [ addressSent, setAddressSent ] = useState<any | null>(false);
 
@@ -29,8 +30,7 @@ export default function EnterAddress() {
         setAuthUser(user);
         fire.firestore().collection("emails").doc(user.uid).get().then((doc) => {
           if (doc?.data() && doc?.data()?.email && doc?.data()?.eth) {
-            setEmailInput(doc?.data()?.email);
-            setEthInput(doc?.data()?.eth);
+            setEmailCheck(doc?.data()?.email);
             setAddressSent(true);
           } else {
             //
@@ -42,17 +42,25 @@ export default function EnterAddress() {
     });
   });
 
-  const onSendEmail = ({ emailInput, ethInput, authUser }) => {
+  const onSendEmail = ({ emailInput, emailCheck, ethInput, authUser }) => {
 
     if (EmailValidator.validate(emailInput) && authUser && ethInput.length > 0) {
+
+      if (emailInput !== emailCheck) {
+        ToastsStore.error(`Sorry, that email isn't on file.`);
+        return;
+      }
+
       fire.firestore().collection('emails').doc(authUser.uid).set({
         email: emailInput,
         eth: ethInput
       }).then(() => {
         setEmailInput('');
+        setEthInput('');
         ToastsStore.success(`Your ETH address has been recorded, tokens will be coming soon!`);
       }).catch(() => {
         setEmailInput('');
+        setEthInput('');
         ToastsStore.success('Something went wrong, please try again.');
       });
     } else {
@@ -77,7 +85,7 @@ export default function EnterAddress() {
                   <h6 className="mt-5">ETH address:</h6>
                   <input className="input pr-0" type="text" placeholder="0x..." value={ethInput}
                   onChange={(event) => setEthInput(event.target.value)} />
-                  <button className="button is-primary eth-button" onClick={() => onSendEmail({ emailInput, ethInput, authUser })}>Submit</button>
+                  <button className="button is-primary eth-button" onClick={() => onSendEmail({ emailInput, emailCheck, ethInput, authUser })}>Submit</button>
                 </div>
               }
 
