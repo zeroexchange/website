@@ -68,7 +68,8 @@ export default function AirDrop() {
             <div className="column is-6 is-offset-3">
               <h5>As a gift to the world this holiday season, a world-wide airdrop of Zero coins starts December 25th, 2020 to those who register and participate by:</h5>
 
-              { !emailSent &&
+              <p className="closed-msg">The Zero Airdrop signup is now closed. Thanks for participating, we will be in touch with our followers to distribute tokens shortly!</p>
+              {/* !emailSent &&
                 <div className="content-box mt-6">
                   <h6>Dropping us your email:</h6>
                   <input className="input" type="email" placeholder="email@example.com" value={emailInput}
@@ -87,8 +88,8 @@ export default function AirDrop() {
                   <FontAwesomeIcon icon="check" size="sm" />
                   <span> Your email has been sent, we will reach out to collect your address when the airdrop is ready!</span>
                 </p>
-              }
-
+              */}
+              {/*
               <div className="content-box mt-6">
                 <h6>Following / joining us on these platforms:</h6>
                 <ul>
@@ -100,6 +101,7 @@ export default function AirDrop() {
                   </li>
                 </ul>
               </div>
+            */}
             </div>
           </div>
         </div>
