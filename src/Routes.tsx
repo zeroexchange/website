@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import AboutUsPage from './pages/AboutUs';
 import AirDropPage from './pages/AirDrop';
+import EnterAddressPage from './pages/EnterAddress';
 import Header from './layout/Header';
 import HomePage from './pages/Home';
 import LearnMorePage from './pages/LearnMore';
@@ -14,6 +15,7 @@ export enum PublicRoutes {
   Contact = '/contact',
   AboutUs = '/about-us',
   AirDrop = '/air-drop',
+  EnterAddress = '/enter-address',
 }
 
 export default function Routes() {
@@ -33,6 +35,9 @@ export default function Routes() {
         </Route>
         <Route path={PublicRoutes.AirDrop}>
           <AirDropPage />
+        </Route>
+        <Route path={PublicRoutes.EnterAddress}>
+          <EnterAddressPage />
         </Route>
       </Switch>
     </BrowserRouter>
