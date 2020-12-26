@@ -34,7 +34,7 @@ export default function Routes() {
           <AboutUsPage />
         </Route>
         <Route path={PublicRoutes.AirDrop}>
-          <AirDropPage />
+          <EnterAddressPage />
         </Route>
         <Route path={PublicRoutes.EnterAddress}>
           <EnterAddressPage />
