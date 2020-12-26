@@ -13,7 +13,6 @@ export default function EnterAddress() {
 
   const [ authUser , setAuthUser ] = useState<any | null>(null);
   const [ emailInput , setEmailInput ] = useState<any | null>('');
-  const [ emailCheck , setEmailCheck ] = useState<any | null>('');
   const [ ethInput , setEthInput ] = useState<any | null>('');
   const [ addressSent, setAddressSent ] = useState<any | null>(false);
 
@@ -28,9 +27,8 @@ export default function EnterAddress() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
         setAuthUser(user);
-        fire.firestore().collection("emails").doc(user.uid).get().then((doc) => {
+        fire.firestore().collection("email-eth").doc(user.uid).get().then((doc) => {
           if (doc?.data() && doc?.data()?.email && doc?.data()?.eth) {
-            setEmailCheck(doc?.data()?.email);
             setAddressSent(true);
           } else {
             //
@@ -42,16 +40,11 @@ export default function EnterAddress() {
     });
   });
 
-  const onSendEmail = ({ emailInput, emailCheck, ethInput, authUser }) => {
+  const onSendEmail = ({ emailInput, ethInput, authUser }) => {
 
     if (EmailValidator.validate(emailInput) && authUser && ethInput.length > 0) {
 
-      if (emailInput !== emailCheck) {
-        ToastsStore.error(`Sorry, that email isn't on file.`);
-        return;
-      }
-
-      fire.firestore().collection('emails').doc(authUser.uid).set({
+      fire.firestore().collection('email-eth').doc(authUser.uid).set({
         email: emailInput,
         eth: ethInput
       }).then(() => {
@@ -75,8 +68,6 @@ export default function EnterAddress() {
           <div className="columns">
             <div className="column is-6 is-offset-3">
               <h3>Enter the email you registered with, and your ETH address to receive your Zero Airdrop</h3>
-              <h5 className="mt-5">**Make sure you are using the same browser that you used when signing up for the Aidrop:</h5>
-
               { !addressSent &&
                 <div className="content-box mt-6">
                   <h6>Email:</h6>
@@ -85,7 +76,7 @@ export default function EnterAddress() {
                   <h6 className="mt-5">ETH address:</h6>
                   <input className="input pr-0" type="text" placeholder="0x..." value={ethInput}
                   onChange={(event) => setEthInput(event.target.value)} />
-                  <button className="button is-primary eth-button" onClick={() => onSendEmail({ emailInput, emailCheck, ethInput, authUser })}>Submit</button>
+                  <button className="button is-primary eth-button" onClick={() => onSendEmail({ emailInput, ethInput, authUser })}>Submit</button>
                 </div>
               }
 
