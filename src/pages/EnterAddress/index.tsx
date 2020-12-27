@@ -11,55 +11,55 @@ import fire from '../../shared/services/fire';
 
 export default function EnterAddress() {
 
-  const [ authUser , setAuthUser ] = useState<any | null>(null);
-  const [ emailInput , setEmailInput ] = useState<any | null>('');
-  const [ ethInput , setEthInput ] = useState<any | null>('');
-  const [ addressSent, setAddressSent ] = useState<any | null>(false);
+  // const [ authUser , setAuthUser ] = useState<any | null>(null);
+  // const [ emailInput , setEmailInput ] = useState<any | null>('');
+  // const [ ethInput , setEthInput ] = useState<any | null>('');
+  // const [ addressSent, setAddressSent ] = useState<any | null>(false);
 
-  useEffect(() => {
-    if (!authUser) {
-      fire.auth().signInAnonymously().then((res) => {
-        //
-      }).catch ((err) => {
-        console.log("firebase error", err);
-      });
-    }
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        setAuthUser(user);
-        fire.firestore().collection("email-eth").doc(user.uid).get().then((doc) => {
-          if (doc?.data() && doc?.data()?.email && doc?.data()?.eth) {
-            setAddressSent(true);
-          } else {
-            //
-          }
-        });
-      } else {
-        //
-      }
-    });
-  });
+  // useEffect(() => {
+  //   if (!authUser) {
+  //     fire.auth().signInAnonymously().then((res) => {
+  //       //
+  //     }).catch ((err) => {
+  //       console.log("firebase error", err);
+  //     });
+  //   }
+  //   fire.auth().onAuthStateChanged((user) => {
+  //     if (user) {
+  //       setAuthUser(user);
+  //       fire.firestore().collection("email-eth").doc(user.uid).get().then((doc) => {
+  //         if (doc?.data() && doc?.data()?.email && doc?.data()?.eth) {
+  //           setAddressSent(true);
+  //         } else {
+  //           //
+  //         }
+  //       });
+  //     } else {
+  //       //
+  //     }
+  //   });
+  // });
 
-  const onSendEmail = ({ emailInput, ethInput, authUser }) => {
-
-    if (EmailValidator.validate(emailInput) && authUser && ethInput.length > 0) {
-
-      fire.firestore().collection('email-eth').doc(authUser.uid).set({
-        email: emailInput,
-        eth: ethInput
-      }).then(() => {
-        setEmailInput('');
-        setEthInput('');
-        ToastsStore.success(`Your ETH address has been recorded, tokens will be coming soon!`);
-      }).catch(() => {
-        setEmailInput('');
-        setEthInput('');
-        ToastsStore.success('Something went wrong, please try again.');
-      });
-    } else {
-      ToastsStore.error('Something went wrong, please try again.');
-    }
-  }
+  // const onSendEmail = ({ emailInput, ethInput, authUser }) => {
+  //
+  //   if (EmailValidator.validate(emailInput) && authUser && ethInput.length > 0) {
+  //
+  //     fire.firestore().collection('email-eth').doc(authUser.uid).set({
+  //       email: emailInput,
+  //       eth: ethInput
+  //     }).then(() => {
+  //       setEmailInput('');
+  //       setEthInput('');
+  //       ToastsStore.success(`Your ETH address has been recorded, tokens will be coming soon!`);
+  //     }).catch(() => {
+  //       setEmailInput('');
+  //       setEthInput('');
+  //       ToastsStore.success('Something went wrong, please try again.');
+  //     });
+  //   } else {
+  //     ToastsStore.error('Something went wrong, please try again.');
+  //   }
+  // }
 
   return (
     <Layout hasSnow={true}>
@@ -67,8 +67,8 @@ export default function EnterAddress() {
       <div className="airdrop-page">
           <div className="columns">
             <div className="column is-6 is-offset-3">
-              <h3>Enter the email you registered with, and your ETH address to receive your Zero Airdrop</h3>
-              { !addressSent &&
+              <h3>The Zero Airdrop period is now over. For those who participated, thank you! Tokens will be dropping shortly.</h3>
+              {/* !addressSent &&
                 <div className="content-box mt-6">
                   <h6>Email:</h6>
                   <input className="input pr-0" type="email" placeholder="email@example.com" value={emailInput}
@@ -85,7 +85,7 @@ export default function EnterAddress() {
                   <FontAwesomeIcon icon="check" size="sm" />
                   <span> Your email and ETH address have been sent. Tokens coming shortly!</span>
                 </p>
-              }
+              */}
             </div>
           </div>
         </div>
