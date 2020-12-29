@@ -18,7 +18,6 @@ export default function LearnMore() {
         <div className="columns">
           <div className="column np">
             <SlideOne />
-            <SlideTwo />
             <SlideSchedule />
             <SlideThree />
             <SlideFour />
