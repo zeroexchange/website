@@ -4,7 +4,7 @@ const SlideFour = () => (
   <div className="slide">
     <div className="slide-inner">
       <div className="slide-left">
-        <h2>The Zero Advantage</h2>
+        <h2>The ZERO Advantage</h2>
         <p>
           Advantages of using the Avalanche Blockchain to underpin ZERO Exchange
         </p>
