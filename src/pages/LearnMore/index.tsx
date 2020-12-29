@@ -5,6 +5,7 @@ import React from 'react'
 import SlideFive from './components/SlideFive';
 import SlideFour from './components/SlideFour';
 import SlideOne from './components/SlideOne';
+import SlideSchedule from './components/SlideSchedule';
 import SlideSeven from './components/SlideSeven';
 import SlideSix from './components/SlideSix';
 import SlideThree from './components/SlideThree';
@@ -18,6 +19,7 @@ export default function LearnMore() {
           <div className="column np">
             <SlideOne />
             <SlideTwo />
+            <SlideSchedule />
             <SlideThree />
             <SlideFour />
             <SlideFive />
