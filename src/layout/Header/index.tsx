@@ -52,10 +52,6 @@ export default function Header(props) {
           </div>
 
           <ul className="link-list">
-            <li onClick={() => handleClick('/air-drop')} className={pathname === '/air-drop' ? 'active' : ''}>
-              Air Drop
-              <FontAwesomeIcon icon="gift" size="sm" />
-            </li>
             <li className="is-hidden-touch">
               <a href='mailto:hello@zero.exchange'>
                 Contact Us
