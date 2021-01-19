@@ -137,6 +137,13 @@
         opacity: .75;
       }
     }
+    &.disabled {
+      opacity: .5;
+      pointer-events: none;
+      img {
+        opacity: .5
+      }
+    }
   }
   @include until($fullhd) {
     li {
