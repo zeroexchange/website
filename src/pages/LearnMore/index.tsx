@@ -9,7 +9,6 @@ import SlideSchedule from './components/SlideSchedule';
 import SlideSeven from './components/SlideSeven';
 import SlideSix from './components/SlideSix';
 import SlideThree from './components/SlideThree';
-import SlideTwo from './components/SlideTwo';
 
 export default function LearnMore() {
   return (
