@@ -26,7 +26,7 @@ const Hero = ({ goToSite }) => (
         <li className="animated fadeInRightMicro d300 delay200" onClick={() => goToSite('https://twitter.com/officialzerodex')}>
           <FontAwesomeIcon icon={['fab', 'twitter']} />
         </li>
-        <li className="animated fadeInRightMicro d300 delay150" onClick={() => goToSite('https://discord.gg/5xwKdqrtDu')}>
+        <li className="animated fadeInRightMicro d300 delay150" onClick={() => goToSite('https://discord.gg/XtZTNVTX5T')}>
           <FontAwesomeIcon icon={['fab', 'discord']} />
         </li>
         <li className="animated fadeInRightMicro d300 delay100" onClick={() => goToSite('https://t.me/ZeroExchangeCommunity')}>
