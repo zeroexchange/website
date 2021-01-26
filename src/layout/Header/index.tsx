@@ -78,7 +78,7 @@ export default function Header(props) {
 
         { mobileMenuOpen &&
           <ul className="mobile-menu animated fadeInUpTiny d250 is-hidden-desktop">
-            <li onClick={() => handleClick('/learn-more')}
+            <li onClick={() => goToSite("/Zero_Whitepaper_Final.pdf")}
               className={`${pathname === '/learn-more' ? 'active' : ''}`}>
               <FontAwesomeIcon icon="question" size="sm" />
               Learn More
