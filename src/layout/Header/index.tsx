@@ -58,7 +58,7 @@ export default function Header(props) {
                 <FontAwesomeIcon icon="envelope" size="sm" />
               </a>
             </li>
-            <li onClick={() => handleClick('/learn-more')}
+            <li onClick={() => goToSite("/Zero_Whitepaper_Final.pdf")}
               className={`is-hidden-touch ${pathname === '/learn-more' ? 'active' : ''}`}>
               Learn More
               <FontAwesomeIcon icon="question" size="sm" />
