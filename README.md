@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# zero.exchange
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Official landing page for https://zero.exchange
 
 ## Available Scripts
 
