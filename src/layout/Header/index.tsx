@@ -55,13 +55,15 @@ export default function Header(props) {
             <li className="is-hidden-touch">
               <a href='mailto:hello@zero.exchange'>
                 Contact Us
-                <FontAwesomeIcon icon="envelope" size="sm" />
               </a>
             </li>
             <li onClick={() => goToSite("/Zero_Whitepaper_Final.pdf")}
               className={`is-hidden-touch ${pathname === '/learn-more' ? 'active' : ''}`}>
-              Learn More
-              <FontAwesomeIcon icon="question" size="sm" />
+              Whitepaper
+            </li>
+            <li onClick={() => goToSite("/Zero_Liquidity_Mining.pdf")}
+              className={`is-hidden-touch ${pathname === '/learn-more' ? 'active' : ''}`}>
+              Liquidity Mining
             </li>
             <li onClick={() => goToSite("https://app.zero.exchange")} className="is-hidden-touch">
               Launch App
@@ -80,11 +82,13 @@ export default function Header(props) {
           <ul className="mobile-menu animated fadeInUpTiny d250 is-hidden-desktop">
             <li onClick={() => goToSite("/Zero_Whitepaper_Final.pdf")}
               className={`${pathname === '/learn-more' ? 'active' : ''}`}>
-              <FontAwesomeIcon icon="question" size="sm" />
-              Learn More
+              Whitepaper
+            </li>
+            <li onClick={() => goToSite("/Zero_Liquidity_Mining.pdf")}
+              className={`${pathname === '/learn-more' ? 'active' : ''}`}>
+              Liquidity Mining
             </li>
             <li>
-              <FontAwesomeIcon icon="envelope" size="sm" />
               <a href='mailto:hello@zero.exchange'>
                 Contact Us
               </a>
