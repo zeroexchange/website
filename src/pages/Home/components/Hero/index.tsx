@@ -19,7 +19,7 @@ const Hero = ({ goToSite }) => (
           </li>
         </ul>
         <div className="beta">
-          Zero Exchange is experimental DeFi softare. Use at your own risk.
+          Zero Exchange is experimental DeFi software. Use at your own risk.
         </div>
       </div>
       <ul className="socials-list column is-2">
