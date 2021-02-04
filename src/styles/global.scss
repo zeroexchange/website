@@ -1,3 +1,4 @@
+@import 'src/styles/mixins';
 
 .container, .columns {
   width: 100%;
@@ -10,6 +11,19 @@
 
 .columns .column.np {
   padding: 0;
+}
+
+.beta {
+  display: block;
+  padding: 1rem;
+  border: 2px solid $purple;
+  border-radius: 12px;
+  font-weight: bold;
+  color: $purple;
+  margin-top: 2rem;
+  @include until($fullhd) {
+    margin: auto;
+  }
 }
 
 .text-link {

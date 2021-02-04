@@ -18,6 +18,9 @@ const Hero = ({ goToSite }) => (
             Read Our Blog
           </li>
         </ul>
+        <div className="beta">
+          Zero Exchange is beta software, use at your own risk
+        </div>
       </div>
       <ul className="socials-list column is-2">
         <li className="animated fadeInRightMicro d300 delay250" onClick={() => goToSite('https://www.facebook.com/ZeroExchange-105556548092263')}>
