@@ -23,6 +23,7 @@
   margin-top: 2rem;
   @include until($fullhd) {
     margin: auto;
+    margin-top: 2rem;
   }
 }
 
