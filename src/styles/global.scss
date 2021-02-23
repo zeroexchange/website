@@ -15,16 +15,12 @@
 
 .beta {
   display: block;
-  padding: 1rem;
-  border: 2px solid $purple;
-  border-radius: 12px;
   font-weight: bold;
-  color: $purple;
+  margin: auto;
   margin-top: 2rem;
-  @include until($fullhd) {
-    margin: auto;
-    margin-top: 2rem;
-  }
+  text-align: center;
+  font-size: .8;
+  color: rgba(255,255,255,.35);
 }
 
 .text-link {

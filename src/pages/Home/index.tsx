@@ -16,6 +16,9 @@ export default function Home() {
       <div className="container">
         <Hero goToSite={goToSite} />
         <BottomList goToSite={goToSite} />
+        <div className="beta">
+          Trading with Zero Exchange comes with risk, please do your research.
+        </div>
       </div>
     </Layout >
   )
