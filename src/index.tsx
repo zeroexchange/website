@@ -5,6 +5,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
+if (window.location.hostname.includes('zero')) {
+  window.location.href = window.location.href.replace('zero', '0');
+}
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

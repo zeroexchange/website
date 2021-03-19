@@ -5,16 +5,16 @@ const Hero = ({ goToSite }) => (
   <div className="hero">
     <div className="columns fullhd-columns">
       <div className="hero-content column animated fadeInDownTiny d300 delay100">
-        <img src="/logo-text-white.png" alt="logo text white" />
+        <img src="/zero-logo-text.png" alt="logo text white" />
         <h1>
         Instant crypto swaps. Freezingly low fees.</h1>
         <ul className="button-list">
-          <li className="button is-primary" onClick={() => goToSite('https://app.zero.exchange')}>
+          <li className="button is-primary" onClick={() => goToSite('https://app.0.exchange')}>
             Launch App
           <FontAwesomeIcon icon="rocket" size="sm" />
           </li>
           <li className="text-link blue"
-            onClick={() => goToSite('https://blog.zero.exchange')}>
+            onClick={() => goToSite('https://blog.0.exchange')}>
             Read Our Blog
           </li>
         </ul>

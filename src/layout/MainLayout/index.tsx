@@ -14,7 +14,6 @@ const LayoutContainer = styled.div`
 const MainLayout = ({ hasSnow, children }) => {
   return (
     <LayoutContainer className="darkblue-bg">
-      {hasSnow && <div className="snow-bg snow"></div>}
       <main id="Main" style={{ flexGrow: 1 }}>
         {children}
       </main>

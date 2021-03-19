@@ -48,12 +48,12 @@ export default function Header(props) {
         <div className="header-container">
 
           <div className="logo" onClick={() => handleClick('/')}>
-            <img src="/logo-zero-512.png" alt="logo" />
+            <img src="/0-icon.png" alt="logo" />
           </div>
 
           <ul className="link-list">
             <li className="is-hidden-touch">
-              <a href='mailto:hello@zero.exchange'>
+              <a href='mailto:hello@0.exchange'>
                 Contact Us
               </a>
             </li>
@@ -65,7 +65,7 @@ export default function Header(props) {
               className={`is-hidden-touch ${pathname === '/learn-more' ? 'active' : ''}`}>
               Liquidity Mining
             </li>
-            <li onClick={() => goToSite("https://app.zero.exchange")} className="is-hidden-touch">
+            <li onClick={() => goToSite("https://app.0.exchange")} className="is-hidden-touch">
               Launch App
               <FontAwesomeIcon icon="rocket" size="sm" />
             </li>
@@ -89,11 +89,11 @@ export default function Header(props) {
               Liquidity Mining
             </li>
             <li>
-              <a href='mailto:hello@zero.exchange'>
+              <a href='mailto:hello@0.exchange'>
                 Contact Us
               </a>
             </li>
-            <li onClick={() => goToSite("https://app.zero.exchange")}>
+            <li onClick={() => goToSite("https://app.0.exchange")}>
               <FontAwesomeIcon icon="rocket" size="sm" />
               Launch App
             </li>

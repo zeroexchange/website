@@ -1,6 +1,6 @@
-# zero.exchange
+# 0.exchange
 
-Official landing page for https://zero.exchange
+Official landing page for https://0.exchange
 
 ## Available Scripts
 
