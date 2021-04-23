@@ -1,11 +1,8 @@
-@import 'src/styles/variables';
-@import 'src/styles/mixins';
+@import "src/styles/variables";
+@import "src/styles/mixins";
 
 .columns.fullhd-columns {
   display: flex;
-  @include until($fullhd) {
-    display: block;
-  }
 }
 
 .hero {
@@ -15,6 +12,7 @@
   margin-top: 2rem;
 
   .hero-content {
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +27,11 @@
       color: $white;
       font-size: 2.25rem;
     }
+    @media screen and (max-width: 1024px) {
+      margin-left: 0px;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   .socials-list {
@@ -39,10 +42,10 @@
     li {
       color: $white;
       font-size: 3rem;
-      transition: color .2s ease-in-out;
+      transition: color 0.2s ease-in-out;
       cursor: pointer;
       * {
-        transition: color .2s ease-in-out;
+        transition: color 0.2s ease-in-out;
         color: $white;
       }
       &:hover {
@@ -66,89 +69,50 @@
       font-size: 1.1rem;
     }
   }
-
-  @include until($fullhd) {
-    height: auto;
-    .hero-content {
-      text-align: center;
-      padding: 1rem;
-      img {
-        width: 240px;
-        margin: auto;
-      }
-      h1 {
-        font-size: 1.25rem;
-        text-align: center;
-        width: 100%;
-      }
-    }
-    .socials-list {
-      flex-direction: row;
-      align-items: center;
-      margin: auto;
-      margin-top: 1.5rem;
-      li {
-        margin-left: .75rem;
-        margin-right: .75rem;
-        font-size: 1.75rem;
-      }
-    }
-    .button-list {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      .button {
-        margin-right: 0;
-      }
-      .text-link {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-      }
-    }
-  }
-
 }
 
 .bottom-list {
+  flex-wrap: wrap;
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   &.disabled {
-    opacity: .5;
+    opacity: 0.5;
     pointer-events: none;
   }
   li {
     margin-left: 1rem;
     margin-right: 1rem;
-    cursor: pointer;
+    background: #2e3273;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 550px) {
+      margin: 10px 1.5rem;
+    }
     img {
       width: 60px;
       opacity: 1;
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       &.white-bg {
         border: 3px solid $white;
         border-radius: 100%;
         background: $white;
       }
       &:hover {
-        opacity: .75;
+        opacity: 0.75;
       }
     }
     &.disabled {
-      opacity: .5;
+      opacity: 0.5;
       pointer-events: none;
       img {
-        opacity: .5
-      }
-    }
-  }
-  @include until($fullhd) {
-    li {
-      img {
-        width: 30px;
+        opacity: 0.5;
       }
     }
   }
