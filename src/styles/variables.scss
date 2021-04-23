@@ -4,7 +4,6 @@ $darkblue: #111;
 $main: #FDFAFF;
 $secondary: #B3A8FF;
 $darkbg: #161A40;
-$white: #fff;
 $lightpurple: #a7b1f4;
 // Bulma's global variables
 $family-sans-serif: 'Poppins', sans-serif;
@@ -21,6 +20,7 @@ $input-border-color: transparent;
 $input-shadow: none;
 $border-radius: 12px;
 
+$darkpurple: #44116e;
 $purple: #C571F4;
 
 .primary-color {
@@ -36,5 +36,10 @@ $purple: #C571F4;
 }
 
 .darkblue-bg {
-  background: #460a70
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: url('./background/ornament1.png'), url('./background/ornament2.png');
+  background-position: left top, left top;
+  background-repeat: no-repeat;
+  background-color: linear-gradient(165.31deg, #2C3168 -6.28%, #0E1130 177.69%);
 }

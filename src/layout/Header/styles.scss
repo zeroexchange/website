@@ -11,7 +11,7 @@
   z-index: 99;
   transition: all 0.2s ease-in-out;
   &.sticky {
-    background: darken($purple, 30%);
+    background: $darkpurple
   }
 }
 
