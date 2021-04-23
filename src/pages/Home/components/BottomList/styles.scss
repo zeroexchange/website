@@ -1,0 +1,16 @@
+@import "src/styles/variables";
+
+.support-chain {
+  text-align: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 80%;
+  /* or 11px */
+
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: $lightpurple;
+}

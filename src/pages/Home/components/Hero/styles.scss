@@ -1,0 +1,141 @@
+@import "src/styles/variables";
+@import "src/styles/global";
+@import "src/styles/mixins";
+
+.hero-wrap {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+
+  @include until($desktop) {
+    padding: 0 25px;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hero__content {
+  @include until($desktop) {
+    text-align: center;
+  }
+}
+
+.hero-desciption {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 225%;
+  letter-spacing: 0.1em;
+  color: $lightpurple;
+  width: 410px;
+
+  @media screen and (max-width: 1024px) {
+    margin: 30px auto;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  & span {
+    color: #ff94ee;
+  }
+}
+
+.hero_button_wrap {
+  @include until($desktop) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.launch_button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 14px 50px;
+  width: 266px;
+  height: 56px;
+  background: $blue;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(28px);
+  border-radius: 44px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  /* Light/01 */
+
+  color: $white;
+
+  @media screen and (max-width: 450px) {
+    width: 200px;
+    font-size: 12px;
+    padding: 30px;
+  }
+}
+
+.rocket-icon {
+  display: inline-block;
+  margin-left: 10px;
+  @media screen and (max-width: 450px) {
+    margin-left: 0px;
+  }
+}
+
+.relative-wrapper-img {
+  position: relative;
+  img {
+    max-width: none !important;
+    @media screen and (max-width: 767px) {
+      max-width: 100% !important;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.devices-img {
+  position: relative;
+  left: 120px;
+  top: -100px;
+  @media screen and (max-width: 1409px) {
+    left: 0px;
+  }
+  @media screen and (max-width: 1215px) {
+    left: -170px;
+  }
+  @include until($desktop) {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.phone-img {
+  display: none;
+  margin-top: 20px;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.tablet-img {
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}

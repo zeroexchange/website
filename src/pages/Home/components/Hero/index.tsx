@@ -1,40 +1,80 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import "./styles.scss";
 
 const Hero = ({ goToSite }) => (
-  <div className="hero">
-    <div className="columns fullhd-columns">
-      <div className="hero-content column animated fadeInDownTiny d300 delay100">
-        <img src="/zero-logo-text.png" alt="logo text white" />
-        <h1>
-        Instant crypto swaps. Freezingly low fees.</h1>
-        <ul className="button-list">
-          <li className="button is-primary" onClick={() => goToSite('https://app.0.exchange')}>
-            Launch App
-          <FontAwesomeIcon icon="rocket" size="sm" />
-          </li>
-          <li className="text-link blue"
-            onClick={() => goToSite('https://blog.0.exchange')}>
-            Read Our Blog
-          </li>
-        </ul>
-      </div>
-      <ul className="socials-list column is-2">
-        <li className="animated fadeInRightMicro d300 delay250" onClick={() => goToSite('https://www.facebook.com/ZeroExchange-105556548092263')}>
-          <FontAwesomeIcon icon={['fab', 'facebook']} />
-        </li>
-        <li className="animated fadeInRightMicro d300 delay200" onClick={() => goToSite('https://twitter.com/officialzerodex')}>
-          <FontAwesomeIcon icon={['fab', 'twitter']} />
-        </li>
-        <li className="animated fadeInRightMicro d300 delay150" onClick={() => goToSite('https://discord.gg/XtZTNVTX5T')}>
-          <FontAwesomeIcon icon={['fab', 'discord']} />
-        </li>
-        <li className="animated fadeInRightMicro d300 delay100" onClick={() => goToSite('https://t.me/ZeroExchangeCommunity')}>
-          <FontAwesomeIcon icon={['fab', 'telegram']} />
+  <div className="hero-wrap">
+    <div className="hero__content animated fadeInDownTiny d300 delay100 ">
+      <svg
+        width="190"
+        height="67"
+        viewBox="0 0 190 67"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16.7371 54.5409H48.5106V66.0411H0V55.922L31.0176 11.7273V11.6476H1.29577V0.0411377H48.4027V9.89465L16.7101 54.355V54.5409H16.7371Z"
+          fill="white"
+        />
+        <path
+          d="M101.064 41.5731C101.064 44.0433 100.954 45.5514 100.761 46.0455H66.1736C66.9716 48.8537 68.4849 51.0379 70.7137 52.624C72.9425 54.2101 75.6116 55.0162 78.7759 55.0162C83.5362 55.0682 87.4709 53.3261 90.5802 49.7638L99.1377 57.2784C94.2399 63.1289 87.1408 66.0411 77.8679 66.0411C70.5486 66.0411 64.4951 63.8309 59.7073 59.3846C54.9471 54.9382 52.5532 49.1397 52.5532 41.9371C52.5532 34.9426 54.8645 29.2221 59.4597 24.7497C64.0549 20.2773 69.8882 18.0411 76.9598 18.0411C84.0865 18.0411 89.8924 20.2513 94.35 24.6717C98.8351 29.0661 101.064 34.7085 101.064 41.5731ZM77.3726 28.9881C74.621 28.9881 72.2546 29.6901 70.3285 31.0942C68.3749 32.4983 67.0266 34.5005 66.2837 37.1007H87.9662C86.4804 31.6923 82.9583 28.9881 77.3726 28.9881Z"
+          fill="white"
+        />
+        <path
+          d="M164.694 66.0411C157.225 66.0411 151.164 63.7789 146.486 59.2806C141.807 54.7822 139.468 49.0357 139.468 42.0411C139.468 35.0466 141.807 29.3001 146.486 24.8017C151.164 20.3033 157.225 18.0411 164.694 18.0411C172.084 18.0411 178.171 20.2773 182.903 24.6977C187.634 29.1441 190 34.9165 190 42.0411C190 49.1657 187.634 54.9382 182.903 59.3846C178.171 63.831 172.11 66.0411 164.694 66.0411ZM164.694 54.8862C168.203 54.8862 171.127 53.6901 173.519 51.2719C175.885 48.8537 177.081 45.7855 177.081 42.0411C177.081 38.2188 175.912 35.1246 173.572 32.7584C171.233 30.3662 168.283 29.1961 164.721 29.1961C161.079 29.1961 158.102 30.4182 155.816 32.8624C153.503 35.3066 152.36 38.3748 152.36 42.0671C152.36 45.6814 153.53 48.7237 155.869 51.2199C158.182 53.6641 161.132 54.8862 164.694 54.8862Z"
+          fill="white"
+        />
+        <path
+          d="M107.128 38.8532V66.0411H120.457V39.7963C120.457 31.6588 129.483 28.9373 135.426 31.7397V18.4556C122.346 16.2191 107.128 23.0363 107.128 38.8532Z"
+          fill="white"
+        />
+      </svg>
+
+      <p className="hero-desciption">
+        Instant crypto swaps and low fees on the world's first{" "}
+        <span>Multi-DEX </span>platform
+      </p>
+      <ul className="button-list hero_button_wrap">
+        <li
+          className="button launch_button "
+          onClick={() => goToSite("https://app.0.exchange")}
+        >
+          Launch The App
+          <span className="rocket-icon">
+            <svg
+              width="28"
+              height="29"
+              viewBox="0 0 28 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.1823 17.1134C22.5767 18.7086 16.4106 25.4289 14.6753 27.2051C14.5401 27.3434 14.3074 27.2239 14.3325 27.0321C14.5007 25.7452 14.7769 22.7416 13.927 21.3675L11.9365 22.9364C11.6025 23.1997 11.1566 23.2762 10.7621 23.1173C10.4321 22.9843 10.0387 22.8127 9.74778 22.6447C9.45686 22.4767 9.11148 22.2219 8.83135 22.0026C8.49645 21.7404 8.33976 21.316 8.40076 20.8951L8.76729 18.366C7.18069 18.2861 4.74058 19.99 3.6708 20.8041C3.51186 20.925 3.28695 20.7715 3.35257 20.5829C4.18225 18.1982 7.27776 10.1105 10.3316 12.5535C10.4985 12.2292 10.6806 11.8957 10.8786 11.553C13.8592 6.39035 18.7922 3.65824 20.2303 4.48854C21.6684 5.31883 21.7688 10.957 18.7882 16.1196C18.586 16.4698 18.384 16.8009 18.1823 17.1134ZM16.494 10.96C17.2882 11.4186 18.3038 11.1465 18.7624 10.3522C19.2209 9.55798 18.9488 8.54238 18.1545 8.08382C17.3603 7.62526 16.3447 7.89739 15.8861 8.69164C15.4276 9.48588 15.6997 10.5015 16.494 10.96Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect
+                    width="28"
+                    height="28"
+                    fill="white"
+                    transform="translate(0 0.0411377)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
         </li>
       </ul>
     </div>
+    <div className="relative-wrapper-img animated fadeInDownTiny d300 delay100">
+      <img src="/devices.png" className="devices-img" alt="Devices" />
+      <img src="/phone.png" className="phone-img" alt="Phone" />
+      <img src="/tablet.png" className="tablet-img" alt="Tablet" />
+    </div>
   </div>
-)
+);
 
-export default Hero
+export default Hero;

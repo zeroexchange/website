@@ -1,26 +1,22 @@
-@import 'src/styles/variables';
-@import 'src/styles/global';
-@import 'src/styles/mixins';
+@import "src/styles/variables";
+@import "src/styles/global";
+@import "src/styles/mixins";
 
 #Header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 80px;
+  height: 168px;
   z-index: 99;
-  transition: all .2s ease-in-out;
-  .container {
-    max-height: 80px;
-  }
+  transition: all 0.2s ease-in-out;
   &.sticky {
-    background: $darkblue;
-    border-bottom: 1px solid rgba($blue, .2);
+    background: darken($purple, 30%);
   }
 }
 
 .header-container {
-  padding: .5rem 1rem;
-  min-height: 80px;
+  height: 100%;
   flex-direction: row;
   display: flex;
   width: 100%;
@@ -37,69 +33,97 @@
     margin-left: auto;
     display: flex;
     flex-direction: row;
+    align-items: center;
     li {
-      color: $white;
-      transition: all .2s ease-in-out;
-      margin-left: 3rem;
-      font-size: 1.1rem;
-      font-weight: bold;
+      color: $main;
+      transition: all 0.2s ease-in-out;
+      margin-left: 40px;
+      font-size: 14px;
+      font-weight: normal;
       cursor: pointer;
-      svg, i {
+      color: $secondary;
+      &:first-child {
+        color: $main;
+        font-weight: 600;
+        &:hover {
+          color: darken($secondary, 10%);
+        }
+      }
+      svg,
+      i {
         margin-left: 12px;
       }
       a {
-        transition: all .2s ease-in-out;
-        color: $white;
+        transition: all 0.2s ease-in-out;
+        color: $main;
       }
       &:hover {
-        color: $blue;
-        a {
-          color: $blue;
-        }
-      }
-      &.active {
-        color: $blue;
-        pointer-events: none;
-      }
-    }
-    @include until($desktop) {
-      margin-right: 1rem;
-      li {
-        margin-left: 1rem;
+        color: lighten($secondary, 10%);
       }
     }
   }
 
+  @include until($desktop) {
+    padding: 0 25px;
+  }
 }
 
 .mobile-menu {
-  width: 100%;
-  background: $white;
-  padding: 0 1rem 0 1rem;
+  position: absolute;
+  right: 0;
+  top: 120px;
+  width: 189px;
+  min-height: 190px;
+  background: linear-gradient(120.33deg, #2c3168 -83.67%, #0e1130 151.81%);
+  border-radius: 18px;
   z-index: 99;
-  box-shadow: 0 0 2px 2px rgba($black, .2);
+  box-shadow: 0 0 2px 2px rgba($black, 0.2);
+ 
+  @include until($desktop) {
+  width: 100%;
+  position: static;
+  margin-top: -20px;
+  border-radius: 0;
+  }
+
   li {
-    color: $blue;
+    transition: all 0.3s ease-in-out;
     display: flex;
     font-size: 1.1rem;
     line-height: 60px;
-    border-bottom: 1px solid rgba($blue, .1);
+    border-bottom: 1px solid rgba($blue, 0.1);
     flex-direction: row;
     align-items: center;
-    a {
-      width: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 80%;
+    height: 50px;
+    padding: 20px;
+    letter-spacing: -0.01em;
+    border: none;
+    color: $secondary;
+    cursor: pointer;
+
+    &:first-child {
+      margin-top: 20px;
     }
-    i, svg {
-      margin-right: 1rem;
-    }
+
     &:hover {
-      color: $blue;
-      a {
-        color: $blue;
-      }
+      color: $white;
+      background: $darkblue;
     }
-    &:last-of-type {
-      border-bottom: 0;
+
+    @include until($desktop) {
+      font-size: 20px;
+      }
+
+  }
+
+  .is-hidden-desktop {
+    &:last-child {
+      margin-bottom: 20px;
     }
   }
 }

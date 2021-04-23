@@ -1,0 +1,70 @@
+@import "src/styles/variables";
+
+.carousel {
+  height: 157px;
+  top: 943px;
+  background: #1a1e48;
+  margin-top: 55px;
+  padding-top: 39px;
+  h5 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 80%;
+    /* or 11px */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $lightpurple;
+  }
+
+  main {
+      margin: 36px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+}
+
+.carousel-wrap {
+  position: relative;
+  top: 40px;
+}
+
+.arrow-left {
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-100%);
+}
+
+.arrow-right {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-100%);
+}
+
+.slider-wrap{
+  pointer-events: none;
+}
+
+.logo {
+  width: 100px;
+  height: 23.25px;
+  transform: translateY(0) scale(.6);
+
+  svg {
+    fill: #fff
+  }
+}
