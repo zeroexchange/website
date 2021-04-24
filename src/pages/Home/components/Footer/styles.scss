@@ -1,0 +1,62 @@
+@import "src/styles/variables";
+
+.home_footer {
+  width: 100%;
+  height: 83px;
+  background: #151943;
+}
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      margin-right: 57px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      @media screen and (max-width: 550px) {
+        margin-right: 20px;
+      }
+
+      a {
+        text-decoration: none;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 80%;
+        /* or 11px */
+
+        text-align: center;
+        letter-spacing: 0.01em;
+        transition: color 0.3s ease;
+        color: #727bba;
+        &:hover {
+          color: $white;
+        }
+        @media screen and (max-width: 550px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.container-footer-icon-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}

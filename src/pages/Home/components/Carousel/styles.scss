@@ -1,0 +1,92 @@
+@import "src/styles/variables";
+
+.carousel {
+  height: 157px;
+  top: 943px;
+  background: #1a1e48;
+  margin-top: 55px;
+  padding-top: 39px;
+  h5 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 80%;
+    /* or 11px */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $lightpurple;
+  }
+
+  main {
+    margin: 36px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.carousel-wrap {
+  position: relative;
+  width: 80%;
+  height: 80px;
+  margin: 15px auto;
+}
+
+.arrow-left {
+  cursor: pointer;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-right {
+  cursor: pointer;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-wrap {
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    width: 110px!important;
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 23.25px;
+  transform: translateY(0) scale(0.6);
+
+  svg {
+    fill: #fff;
+  }
+}
+
+.slick-slider.slick-initialized {
+  width: 100%!important;
+}
+
+.slick-slide {
+  text-align: center!important;
+}
+
+.slick-arrow {
+  display: none!important;
+}

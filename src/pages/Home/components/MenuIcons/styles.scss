@@ -1,0 +1,15 @@
+@import 'src/styles/variables';
+
+.close_icon_wrap {
+  background: $darkbg;
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+      margin-left: 0px!important;
+  }
+}
