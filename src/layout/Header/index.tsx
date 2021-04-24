@@ -46,7 +46,7 @@ export default function Header() {
   return (
     <div
       id="Header"
-      className={`animated fadeInDownTiny d300 ${stickyHeader ? "sticky" : ""}`}
+      className={`animated fadeInDownTiny d300 ${stickyHeader || mobileMenuOpen ? "sticky" : ""}`}
     >
       <div className="container">
         <div className="header-container">

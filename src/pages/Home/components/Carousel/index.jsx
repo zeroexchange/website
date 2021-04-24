@@ -1,5 +1,5 @@
 import "./styles.scss";
-import React, { Component } from "react";
+import { Component } from "react";
 import Slider from "react-slick";
 
 export default class Carousel extends Component {
@@ -20,7 +20,7 @@ export default class Carousel extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 5,
-      slidesToScroll: 1,
+      slidesToScroll: 5,
       responsive: [
         {
           breakpoint: 1024,
@@ -65,24 +65,96 @@ export default class Carousel extends Component {
             </svg>
           </div>
           <div className="slider-wrap">
-          <Slider ref={c => (this.slider = c)} {...settings}>
+            <Slider ref={(c) => (this.slider = c)} {...settings}>
               <div className="slider-wrap__item">
-                <img src="/bitcoin-com.png" alt="Logo bitcoin-com"/>
+                <a href="https://exchange.bitcoin.com/" target="_blank">
+                  <img src="/bitcoin-com.png" alt="Logo bitcoin-com" />
+                </a>
               </div>
               <div className="slider-wrap__item">
-                <img src="/bitcoin-com.png" />
+                <a href="https://www.avalabs.org/" target="_blank">
+                  <img src="/avalabs.png" alt="Logo avalabs" />
+                </a>
               </div>
               <div className="slider-wrap__item">
-                <img src="/bitcoin-com.png" />
+                <a href="https://www.bithumb.pro/en-us" target="_blank">
+                  <img src="/bithumb.png" alt="Logo bithumb" />
+                </a>
               </div>
               <div className="slider-wrap__item">
-                <img src="/bitcoin-com.png" />
+                <a href="https://www.bridgemutual.io/" target="_blank">
+                  <img src="/bridge.png" alt="Logo bridge" />
+                </a>
               </div>
               <div className="slider-wrap__item">
-                <img src="/bitcoin-com.png"/>
+                <a href="https://www.binance.org/en/smartChain" target="_blank">
+                  <img src="/bsc.png" alt="Logo bsc" />
+                </a>
               </div>
-           
-          </Slider>
+              <div className="slider-wrap__item">
+                <a href="https://kaironlabs.com/" target="_blank">
+                  <img src="/kairon.png" alt="Logo kairon" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://moonbeam.network/" target="_blank">
+                  <img src="/moonbeam.png" alt="Logo moonbeam" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://polkadot.network/" target="_blank">
+                  <img src="/polkadot.png" alt="Logo polkadot" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://web3api.substack.com/" target="_blank">
+                  <img src="/web3api.png" alt="Logo web3api" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://wasder.gg/ " target="_blank">
+                  <img src="/wasder.png" alt="Logo wasder" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a
+                  href="https://indacoin.com/buy-bitcoin-with-card"
+                  target="_blank"
+                >
+                  <img src="/indacoin.png" alt="Logo indacoin" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://grow.house/" target="_blank">
+                  <img src="/grow.png" alt="Logo grow" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://gda.capital/" target="_blank">
+                  <img src="/gda.png" alt="Logo gda" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://www.fireblocks.com/" target="_blank">
+                  <img src="/fireblocks.png" alt="Logo fireblocks" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="http://hypercube.video/ " target="_blank">
+                  <img src="/hypercube.png" alt="Logo hypercube" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://changelly.com/" target="_blank">
+                  <img src="/changelly.png" alt="Logo changelly" />
+                </a>
+              </div>
+              <div className="slider-wrap__item">
+                <a href="https://bscstarter.finance/#/home" target="_blank">
+                  <img src="/bscstarter.png" alt="Logo bscstarter" />
+                </a>
+              </div>
+            </Slider>
           </div>
           <div className="arrow-right arrow" onClick={this.next}>
             <svg
