@@ -79,7 +79,7 @@ export default class Carousel extends Component {
                 <img src="/bitcoin-com.png" />
               </div>
               <div className="slider-wrap__item">
-                <img src="/bitcoin-com.png" />
+                <img src="/bitcoin-com.png"/>
               </div>
            
           </Slider>
